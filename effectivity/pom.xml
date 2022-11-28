@@ -40,10 +40,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
-    </properties>
     <build>
         <plugins>
             <!-- Maven assembly plugin is invoked with default setting which we have

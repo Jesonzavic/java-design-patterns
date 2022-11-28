@@ -25,10 +25,17 @@
 
 package com.iluwatar.effectivity;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 /**
  * DateRange consists of a start and an end date, and a method includes to test
  * if a {@link SimpleDate} is within those start and end dates.
  */
+@Getter
+@Setter
+@ToString(includeFieldNames = false)
 public class DateRange {
   private final SimpleDate startDate;
   private final SimpleDate endDate;
@@ -57,18 +64,5 @@ public class DateRange {
    */
   public boolean includes(SimpleDate arg) {
     return (getStartDate().compareTo(arg) <= 0 & getEndDate().compareTo(arg) >= 0);
-  }
-
-  public SimpleDate getStartDate() {
-    return startDate;
-  }
-
-  public SimpleDate getEndDate() {
-    return endDate;
-  }
-
-  @Override
-  public String toString() {
-    return "(" + startDate.toString() + " : " + endDate.toString() + ")";
   }
 }

@@ -25,16 +25,19 @@
 
 package com.iluwatar.effectivity;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 /**
  * Employment denotes an employment with a given company over some date range.
  */
+@Getter
+@Setter
+@ToString(includeFieldNames = false)
 public class Employment {
   private DateRange effective;
   private Company company;
-
-  public Company getCompany() {
-    return company;
-  }
 
   Employment(Company company, DateRange effective) {
     this.company = company;
@@ -58,14 +61,5 @@ public class Employment {
    */
   public void setEnd(SimpleDate endDate) {
     effective = new DateRange(effective.getStartDate(), endDate);
-  }
-
-  public void setEffective(DateRange range) {
-    effective = range;
-  }
-
-  @Override
-  public String toString() {
-    return getCompany().toString() + " : " + effective.toString();
   }
 }

@@ -25,17 +25,18 @@
 
 package com.iluwatar.effectivity;
 
+import lombok.Getter;
+import lombok.ToString;
+
 /**
  * Simple class for sub-classes to have String names and toString implemented.
  */
+@ToString(includeFieldNames = false)
+@Getter
 public class NamedObject {
   private final String name;
 
   public NamedObject(String name) {
     this.name = name;
-  }
-
-  public String toString() {
-    return name;
   }
 }

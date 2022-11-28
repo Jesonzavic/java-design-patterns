@@ -54,7 +54,6 @@ public class EffectivityTests {
     }
     assertNotNull(actual);
     assertEquals(peninsular, actual.getCompany());
-    assertEquals("peninsular", actual.getCompany().toString());
   }
 
   @Test

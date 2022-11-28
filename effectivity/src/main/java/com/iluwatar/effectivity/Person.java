@@ -24,22 +24,19 @@
  */
 
 package com.iluwatar.effectivity;
-
 import java.util.ArrayList;
+import lombok.Getter;
 
 /**
  * A person represents a person with a name, and a list of {@link Employment}s.
  */
+@Getter
 class Person extends NamedObject {
   private final ArrayList<Employment> employments;
 
   public Person(String name) {
     super(name);
     employments =  new ArrayList<>();
-  }
-
-  ArrayList<Employment> getEmployments() {
-    return employments;
   }
 
   /**

@@ -89,10 +89,6 @@ public class Employment {
   public void setEnd(SimpleDate endDate) {
     effective = new DateRange(effective.getStartDate(), endDate);
   }
-
-  public void setEffective(DateRange range) {
-    effective = range;
-  }
 }
 ```
 
@@ -124,8 +120,8 @@ a span of time
 Has an output of 
 ```
 Bob's employments:
-AA inc : (2003-06-02 : 2008-02-04)
-BB Company : (2008-03-19 : +99999-12-31)
+Employment(DateRange(SimpleDate(2003-06-02), SimpleDate(2008-02-04)), NamedObject(AA inc))
+Employment(DateRange(SimpleDate(2008-03-19), SimpleDate(+99999-12-31)), NamedObject(BB Company))
 ```
 
 
